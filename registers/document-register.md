@@ -14,19 +14,20 @@ last_updated: 2026-07-22
 ## Control state
 
 - Git is the working source; SharePoint is the official manual publication and approval target.
-- This register and every listed Phase 2 document are Draft and version 0.1.
+- This register and every listed Phase 2 document are Draft and version 0.1; the three Phase 3 Discovery Draft documents are also Draft and version 0.1.
 - No listed document has an approved content commit or SharePoint synchronization record.
 - The repository is public; no sensitive or customer-identifying information may be recorded.
 
 ## Purpose
 
-This register provides version, ownership, approval, Git-content, and SharePoint traceability for the exact 11 Phase 2 baseline files. The controlling plan artifact is intentionally not a register row.
+This register provides version, ownership, approval, Git-content, and SharePoint traceability for the 11 Phase 2 baseline files and three Phase 3 Discovery Draft documents. The controlling plan artifact is intentionally not a register row.
 
 ## Classifications
 
 - **Governance:** Repository rules, scope, authority, or operating procedures.
 - **Register:** Controlled structured records maintained over time.
 - **Template:** Controlled reusable structures; a template is not a completed project-content document.
+- **Project Document:** Evidence-backed controlled project-content document; a Discovery Draft remains unapproved until evidence review and explicit approval.
 
 ## Field definitions
 
@@ -35,7 +36,7 @@ This register provides version, ownership, approval, Git-content, and SharePoint
 | Document ID | Stable unique identifier used across metadata, links, and registers |
 | Git path | Authoritative repository-relative working-source path |
 | Title | Controlled human-readable document title |
-| Classification | Governance, Register, or Template |
+| Classification | Governance, Register, Template, or Project Document |
 | Status | Document lifecycle state: Draft, In Review, Approved, or Superseded |
 | Version | Controlled document version independent of ordinary commit count |
 | Owner | Person accountable for accuracy and maintenance |
@@ -62,6 +63,9 @@ This register provides version, ownership, approval, Git-content, and SharePoint
 | `SAC-TPL-002` | `templates/current-state-brief-template.md` | Current-State Brief Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-TPL-003` | `templates/meeting-minutes-template.md` | Meeting Minutes Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-TPL-004` | `templates/handover-checklist-template.md` | Handover Checklist Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-DOC-001` | `docs/02-handover-and-discovery/current-state-brief.md` | Current-State Brief | Project Document | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-DOC-002` | `docs/02-handover-and-discovery/handover-checklist.md` | Handover Checklist | Project Document | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-REG-004` | `docs/02-handover-and-discovery/confirmation-register.md` | Confirmation Register | Register | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 
 ## Maintenance rules
 
@@ -73,7 +77,7 @@ This register provides version, ownership, approval, Git-content, and SharePoint
 
 ## Current classifications
 
-- **Confirmed:** Exactly 11 Phase 2 baseline files are registered.
+- **Confirmed:** Exactly 11 Phase 2 baseline files and three Phase 3 Discovery Draft documents are registered.
 - **Assumption:** None recorded.
 - **Unknown/TBD:** All approval-commit and SharePoint fields are TBD.
 - **Decision required:** Approval and publication require later explicit human decisions.

@@ -1,27 +1,35 @@
 ---
 plan_id: SAC-PLAN-0002
 title: Current-State Discovery and Decision Readiness
-status: Proposed / Not Approved
+status: Approved
 version: 0.2
 repository: frwkHoangQuy/-Doc-SAC
 plan_branch: plan/0002-current-state-discovery-readiness
 prepared_by: Codex
 human_authority: Hoang Quy Nguyen
 created_date: 2026-07-22
-review_commit: TBD
-approval_status: Not Approved
-implementation_authorization: Not Approved
+review_commit: 4ce275b0ecb3cd297636bade6168407de4e3b2d0
+approval_status: Approved
+implementation_authorization: Approved for exactly the Section 4 six-file allowlist
 ---
 
 # Current-State Discovery and Decision Readiness Plan
 
 ## Control state
 
-- **Confirmed:** This is SAC-PLAN-0002, a planning artifact for Phase 3.
+- **Confirmed:** SAC-PLAN-0002 v0.2 was approved on 2026-07-22 at commit `4ce275b0ecb3cd297636bade6168407de4e3b2d0` as the controlling Phase 3 plan.
 - **Confirmed:** The repository working source is Git; SharePoint is the official manual publication and approval target under the existing governance documents.
 - **Confirmed:** The repository is public and its public-repository restrictions apply to all Phase 3 work.
-- **Decision required:** Substantive Phase 3 implementation is not effective until the human authority explicitly approves this pushed plan commit SHA and its exact implementation allowlist.
-- **Decision required:** Merge authorization is not granted by this plan, its commit, its push, or any future review artifact.
+- **Confirmed:** Phase 3 Discovery Draft implementation is authorized only on `implementation/0002-current-state-discovery-readiness` and only for the exact six-file allowlist in Section 4.
+- **Decision required:** Merge authorization is not granted by this plan, its approval, its implementation authorization, or any review artifact.
+
+## Execution record
+
+- **Confirmed:** The controlling plan was approved on 2026-07-22, and the authorized implementation branch is `implementation/0002-current-state-discovery-readiness`.
+- **Confirmed:** The Discovery Draft package was created under the exact Section 4 six-file allowlist.
+- **Confirmed:** `SAC-DOC-001`, `SAC-DOC-002`, and `SAC-REG-004` remain Draft / Not Approved.
+- **Unknown/TBD:** Factual evidence review remains pending; the 2026-07-23 evidence update requires separate explicit authorization.
+- **Decision required:** Merge, Ready transition, SharePoint action, factual closure, architecture design, and software implementation remain unauthorized.
 
 ## 1. Phase 3 objective
 
@@ -51,9 +59,9 @@ Every material statement in the Phase 3 Discovery Draft package must use one of 
 - **Unknown/TBD:** No team assignment, reuse conclusion, architecture choice, scope commitment, schedule commitment, or other unverified project fact is established by this plan.
 - **Confirmed:** Phase 3 may document questions, evidence references, statuses, gaps, and decision requirements; it must not convert an unverified item into a confirmed fact.
 
-## 4. Proposed exact Phase 3 implementation allowlist
+## 4. Approved exact Phase 3 implementation allowlist
 
-After explicit plan-SHA approval, the implementation branch may create or modify only the following paths:
+Following explicit plan-SHA approval, the authorized implementation branch created or modified only the following paths:
 
 | Path | Intended Phase 3 action |
 |---|---|
@@ -65,7 +73,7 @@ After explicit plan-SHA approval, the implementation branch may create or modify
 | `registers/decision-log.md` | Preserve `SAC-DEC-001` through `SAC-DEC-006` exactly and add only the two authorized decision records defined in Section 6. |
 
 - **Confirmed:** The plan file is included only because Phase 3 implementation is expected to make the narrow execution/status-record update described in the first allowlist row.
-- **Decision required:** The exact allowlist above requires explicit human approval against this pushed plan SHA before implementation begins.
+- **Confirmed:** The exact allowlist above received explicit human approval against the pushed plan SHA before implementation began.
 - **Confirmed:** No other repository file is authorized for Phase 3 implementation by this plan.
 
 ## 5. Document-control mapping
@@ -78,15 +86,15 @@ The following are the only Phase 3 document-control identifiers authorized for l
 | `SAC-DOC-002` | Handover Checklist | Project Document | Draft / Not Approved | `docs/02-handover-and-discovery/handover-checklist.md` |
 | `SAC-REG-004` | Confirmation Register | Register | Draft / Not Approved | `docs/02-handover-and-discovery/confirmation-register.md` |
 
-- **Confirmed:** Later authorized implementation must update `registers/document-register.md` to add `Project Document` as a permitted classification and add only the three rows above.
-- **Confirmed:** The three new rows must leave approval, `approved_content_commit`, and all SharePoint fields unapproved or `TBD`.
+- **Confirmed:** Authorized implementation updated `registers/document-register.md` to add `Project Document` as a permitted classification and only the three rows above.
+- **Confirmed:** The three new rows leave approval, `approved_content_commit`, and all SharePoint fields unapproved or `TBD`.
 - **Confirmed:** No additional document ID or document-register row is authorized by this plan.
-- **Decision required:** Plan approval and implementation authorization approve the controlling plan and permit only the six-file implementation; they do not approve `SAC-DOC-001`, `SAC-DOC-002`, or `SAC-REG-004`.
+- **Confirmed:** Plan approval and implementation authorization approved the controlling plan and permitted only the six-file implementation; they did not approve `SAC-DOC-001`, `SAC-DOC-002`, or `SAC-REG-004`.
 
 ## 6. Decision-log mapping and authorization state
 
-- **Confirmed:** Later authorized implementation must preserve `SAC-DEC-001` through `SAC-DEC-006` exactly, including wording, status, evidence, scope, and order.
-- **Confirmed:** Later authorized implementation may add only `SAC-DEC-007` for explicit approval of the final SAC-PLAN-0002 SHA and `SAC-DEC-008` for explicit authorization of the exact six-file Phase 3 implementation allowlist.
+- **Confirmed:** Authorized implementation preserved `SAC-DEC-001` through `SAC-DEC-006` exactly, including wording, status, evidence, scope, and order.
+- **Confirmed:** Authorized implementation added only `SAC-DEC-007` for explicit approval of the final SAC-PLAN-0002 SHA and `SAC-DEC-008` for explicit authorization of the exact six-file Phase 3 implementation allowlist.
 - **Confirmed:** Each permitted new decision record must cite the immutable approved plan SHA and explicit human authorization.
 - **Confirmed:** No Proposed, Approved, or inferred decision record may be created for Hanoi versus Ho Chi Minh City delivery ownership or new-build versus reuse/extension versus hybrid delivery strategy.
 - **Decision required:** Delivery ownership and delivery strategy remain separate unresolved human decisions, even after plan approval and implementation authorization.
@@ -145,7 +153,7 @@ The consolidated confirmation inventory and related Discovery Draft documents mu
 The required workflow is:
 
 ```text
-explicit plan-SHA approval
+approved plan-SHA and exact six-file allowlist
 → implementation branch `implementation/0002-current-state-discovery-readiness`
 → exact allowlist
 → validation
@@ -155,12 +163,10 @@ explicit plan-SHA approval
 → SHA/PR review
 ```
 
-- **Decision required:** Create `implementation/0002-current-state-discovery-readiness` only after explicit approval of the final pushed plan SHA and the exact six-file allowlist in Section 4.
-- **Confirmed:** The implementation branch must be created from the approved plan SHA itself, not from `main`.
-- **Confirmed:** This correction does not create, move, or otherwise modify the implementation branch.
-- **Confirmed:** The implementation commit must be new and non-amended.
-- **Confirmed:** The implementation must be normally pushed without force and reviewed through one Draft PR.
-- **Confirmed:** This planning task does not authorize or perform substantive Phase 3 implementation, merge or Ready transition, SharePoint synchronization, architecture design, or software implementation.
+- **Confirmed:** `implementation/0002-current-state-discovery-readiness` was created only after explicit approval of the final pushed plan SHA and the exact six-file allowlist in Section 4.
+- **Confirmed:** The implementation branch was created from the approved plan SHA itself, not from `main`.
+- **Confirmed:** The implementation commit was new and non-amended, normally pushed without force, and submitted through one Draft PR.
+- **Confirmed:** The controlling-plan approval authorized substantive Phase 3 Discovery Draft implementation only; it did not authorize merge or Ready transition, SharePoint synchronization, factual closure, architecture design, or software implementation.
 - **Decision required:** Merge, a Ready transition, SharePoint synchronization, architecture design, and software implementation each require separate explicit authorization.
 
 ## 11. Validation and acceptance checks for later implementation
@@ -177,19 +183,19 @@ Before an authorized Phase 3 implementation commit, validate:
 
 ## 12. Review state and authorization gate
 
-- **Confirmed:** Plan status is **Proposed / Not Approved**.
-- **Decision required:** This plan’s controlling review object is its pushed Git commit SHA; content pasted into chat or an issue is not a substitute for SHA-based review.
-- **Decision required:** Substantive Phase 3 implementation and merge authorization are not effective until explicit human approval is issued against the pushed plan SHA.
+- **Confirmed:** Plan status is **Approved**.
+- **Confirmed:** This plan’s controlling review object was its approved pushed Git commit SHA; content pasted into chat or an issue was not a substitute for SHA-based review.
+- **Confirmed:** Explicit human approval was issued against the pushed plan SHA before substantive Phase 3 Discovery Draft implementation; merge authorization remains ineffective.
 - **Confirmed:** The document register intentionally has no controlling-plan row under current register design; the plan must not cause an unapproved register change during this planning task.
 
 ## 13. Plan-review acceptance criteria
 
 - **Confirmed:** A reviewer can identify the Phase 3 objective, public-safety boundary, mandatory classifications, all required confirmation coverage, both unresolved delivery-strategy decisions, exact proposed implementation allowlist, completion distinction, workflow, and authorization gates from this plan.
-- **Decision required:** Human approval must identify this exact pushed commit SHA and confirm the exact implementation allowlist before substantive Phase 3 work begins.
+- **Confirmed:** Human approval identified the exact pushed plan commit SHA and confirmed the exact implementation allowlist before substantive Phase 3 Discovery Draft work began.
 
 ## Current classifications
 
 - **Confirmed:** This is a public-safe planning artifact only; it establishes no project facts beyond the authorized planning instructions and existing repository governance.
 - **Assumption:** Authorized evidence and human responses may be available for review on 2026-07-23, `Asia/Ho_Chi_Minh`.
 - **Unknown/TBD:** All unverified project facts, including mandate, team responsibilities, software condition, scope, schedule, resources, architecture, and operational readiness, remain TBD.
-- **Decision required:** Approve this pushed plan SHA and exact allowlist before implementation; separately decide delivery ownership, delivery strategy, merge, and any SharePoint action.
+- **Decision required:** Delivery ownership, delivery strategy, merge, and any SharePoint action remain separate unresolved decisions.
