@@ -1,27 +1,35 @@
 ---
 plan_id: SAC-PLAN-0002
 title: Current-State Discovery and Decision Readiness
-status: Proposed / Not Approved
+status: Approved
 version: 0.2
 repository: frwkHoangQuy/-Doc-SAC
 plan_branch: plan/0002-current-state-discovery-readiness
 prepared_by: Codex
 human_authority: Hoang Quy Nguyen
 created_date: 2026-07-22
-review_commit: TBD
-approval_status: Not Approved
-implementation_authorization: Not Approved
+review_commit: 4ce275b0ecb3cd297636bade6168407de4e3b2d0
+approval_status: Approved
+implementation_authorization: Approved for exactly the Section 4 six-file allowlist
 ---
 
 # Current-State Discovery and Decision Readiness Plan
 
 ## Control state
 
-- **Confirmed:** This is SAC-PLAN-0002, a planning artifact for Phase 3.
+- **Confirmed:** SAC-PLAN-0002 v0.2 was approved on 2026-07-22 at commit `4ce275b0ecb3cd297636bade6168407de4e3b2d0` as the controlling Phase 3 plan.
 - **Confirmed:** The repository working source is Git; SharePoint is the official manual publication and approval target under the existing governance documents.
 - **Confirmed:** The repository is public and its public-repository restrictions apply to all Phase 3 work.
-- **Decision required:** Substantive Phase 3 implementation is not effective until the human authority explicitly approves this pushed plan commit SHA and its exact implementation allowlist.
-- **Decision required:** Merge authorization is not granted by this plan, its commit, its push, or any future review artifact.
+- **Confirmed:** Phase 3 Discovery Draft implementation is authorized only on `implementation/0002-current-state-discovery-readiness` and only for the exact six-file allowlist in Section 4.
+- **Decision required:** Merge authorization is not granted by this plan, its approval, its implementation authorization, or any review artifact.
+
+## Execution record
+
+- **Confirmed:** The controlling plan was approved on 2026-07-22, and the authorized implementation branch is `implementation/0002-current-state-discovery-readiness`.
+- **Confirmed:** The Discovery Draft package was created under the exact Section 4 six-file allowlist.
+- **Confirmed:** `SAC-DOC-001`, `SAC-DOC-002`, and `SAC-REG-004` remain Draft / Not Approved.
+- **Unknown/TBD:** Factual evidence review remains pending; the 2026-07-23 evidence update requires separate explicit authorization.
+- **Decision required:** Merge, Ready transition, SharePoint action, factual closure, architecture design, and software implementation remain unauthorized.
 
 ## 1. Phase 3 objective
 
