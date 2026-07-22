@@ -65,7 +65,7 @@ TBD
 
 TBD
 
-## Schedule
+## Schedule and milestones
 
 TBD
 
@@ -130,7 +130,7 @@ No assumptions recorded.
 - Handover status: TBD
 - Software inventory: TBD
 - Scope: TBD
-- Schedule: TBD
+- Schedule and milestones: TBD
 - Resources: TBD
 - Architecture: TBD
 - Integrations: TBD

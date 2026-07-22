@@ -51,6 +51,14 @@ last_updated: 2026-07-22
 - **Date and target date:** ISO `YYYY-MM-DD` or `TBD`.
 - **Owner:** Authorized named owner or `TBD`; do not infer ownership.
 
+## Maintenance and review rules
+
+- Add an entry only when it is supported by identified evidence or explicitly authorized for recording; otherwise retain `TBD`.
+- Preserve entry history. Update status, evidence, actions, and review dates without silently changing the original recorded condition.
+- Review open and monitoring entries at an authorized cadence or when material evidence changes; record the review outcome in the entry.
+- Close an entry only with recorded resolution evidence and authorized review.
+- Do not use this log to record secrets, customer-identifying information, sensitive handover details, or non-public operational information.
+
 ## Entries
 
 No entries recorded.

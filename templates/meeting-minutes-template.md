@@ -13,6 +13,8 @@ last_updated: 2026-07-22
 
 > Minutes created from this template remain Draft until reviewed. Attendance, discussion, actions, and decisions must not be treated as approved merely because they are recorded.
 
+Meeting minutes remain Draft until reviewed and do not replace controlled decision records or approved documents.
+
 ## Control state
 
 - Git is the working source; SharePoint is the official manual publication and approval target.
@@ -27,7 +29,7 @@ last_updated: 2026-07-22
 | Date | TBD (`YYYY-MM-DD`) |
 | Time | TBD |
 | Timezone | `Asia/Ho_Chi_Minh` |
-| Location | TBD |
+| Location or channel | TBD |
 | Purpose | TBD |
 | Minute owner | TBD |
 
