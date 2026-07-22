@@ -2,7 +2,7 @@
 plan_id: SAC-PLAN-0001
 title: Repository Initialization Plan
 status: Proposed
-version: 0.1
+version: 0.2
 repository: frwkHoangQuy/-Doc-SAC
 plan_branch: plan/0001-repository-initialization
 prepared_by: Codex
@@ -19,19 +19,21 @@ This plan is **Proposed** and **Not Approved**. Its persistence and push for rev
 
 ## 1. Executive conclusion
 
-The repository is genuinely empty and suitable for controlled initialization, but Phase 2 should not begin until three material decisions are made:
+The repository was genuinely empty during Phase 1 discovery. It now contains the persisted plan as its root commit on `plan/0001-repository-initialization`; that branch is the first and only remote branch and was automatically designated as the default branch by GitHub. `main` does not yet exist.
 
-1. Whether this public repository may remain public given its intended project/customer documentation.
-2. How the first commit will be created, because an empty repository cannot use the normal branch-and-PR workflow.
-3. The documentation language policy.
+The human authority has resolved the documentation language, initial lifecycle status and version, initial ownership and approval, exact Phase 2 file scope, bootstrap topology, document-register initialization, and temporary treatment of public visibility. These decisions revise the proposed plan but do not approve it or authorize implementation.
 
 The candidate directory structure is too broad for the first baseline. The recommended initial baseline contains exactly 11 governance, register, and template files. Project-content directories should be created only when evidence-backed documents are ready.
 
 No implementation was performed.
 
-## 2. Verified repository checkpoint
+## 2. Verified repository checkpoints
 
-Verification date: 2026-07-22, Asia/Bangkok.
+### 2.1 Historical Phase 1 checkpoint
+
+Verification date: 2026-07-22, Asia/Ho_Chi_Minh.
+
+This is a time-bounded historical record of repository state before the plan artifact was persisted. It must not be used as the operational starting state for Phase 2.
 
 | Item | Verified result | Evidence |
 |---|---|---|
@@ -56,13 +58,34 @@ Verification date: 2026-07-22, Asia/Bangkok.
 | Local status | No working-tree or index changes | Status contained only branch headers and no file entries |
 | Configured remote | `origin` -> repository URL above | Sanitized remote inspection |
 
-The distinction between "configured default branch" and "actual branch" is important: GitHub is configured to use `main`, but no `refs/heads/main` exists until the first commit is created.
+At that historical checkpoint, the distinction between "configured default branch" and "actual branch" was important: GitHub was configured to use `main`, but no `refs/heads/main` existed because the repository had no commit.
+
+### 2.2 Post-plan-persistence checkpoint
+
+Verification date: 2026-07-22, Asia/Ho_Chi_Minh.
+
+| Item | Verified result | Evidence |
+|---|---|---|
+| Repository | `frwkHoangQuy/-Doc-SAC` | Configured origin and GitHub repository metadata |
+| Visibility | **Public** | GitHub reported `visibility: PUBLIC` |
+| Repository state | No longer empty | GitHub reported `isEmpty: false` |
+| Root commit | `2fafae7f304ca5acdc675509da7f658f97a7903c` | Local HEAD and remote branch ref matched |
+| Root-commit content | `docs/plans/0001-repository-initialization-plan.md` | Commit file inspection |
+| Remote branch | `plan/0001-repository-initialization` | `git ls-remote --heads origin` |
+| Current default branch | `plan/0001-repository-initialization` | GitHub `defaultBranchRef`; automatically designated because it was the first and only branch |
+| `main` | Does not exist | No local or remote `refs/heads/main` |
+| Pull requests | None | `gh pr list --state all` returned `[]` |
+| Local/remote divergence | None | Both branch heads were the root commit; ahead/behind was `0/0` |
+| Local status | Clean | `git status --short --branch` had no file entries |
+
+The former "empty repository / no commit / first commit choice" condition is no longer an active blocker. The operational starting point for any separately authorized Phase 2 is a future human-approved plan revision commit on the plan branch, using the bootstrap topology in Section 12.
 
 ## 3. Authority and instruction files read
 
 The following authority/instructions were considered:
 
 - The complete Phase 1 instruction supplied by Hoang Quy Nguyen in this conversation.
+- The Phase 1 plan-persistence instruction and the v0.2 revision instruction supplied by Hoang Quy Nguyen.
 - The GitHub repository-orientation skill instructions used for read-only repository verification.
 - Repository root and tracked-file searches for:
   - `AGENTS.md`;
@@ -76,14 +99,16 @@ No repository-level instruction, contribution, workflow, security, or governance
 
 ## 4. Confirmed facts
 
-### Repository-confirmed
+### Repository-confirmed current facts
 
 - The exact repository is `frwkHoangQuy/-Doc-SAC`.
 - It is public.
-- Its configured default branch name is `main`.
-- It has no commits, branch refs, tags, files, issues, or pull requests.
+- Its current default branch is `plan/0001-repository-initialization`.
+- It has root commit `2fafae7f304ca5acdc675509da7f658f97a7903c`, which contains the plan artifact.
+- The plan branch exists remotely; `main` does not exist.
+- It has no pull requests.
 - The local checkout points to the stated GitHub repository.
-- The local checkout is clean and has an unborn `main`.
+- The local checkout was clean and matched the remote plan branch at the v0.2 pre-write checkpoint.
 
 ### Confirmed by the task authority
 
@@ -93,6 +118,11 @@ No repository-level instruction, contribution, workflow, security, or governance
 - Hoang Quy Nguyen is the human authority for material scope and implementation gates.
 - Synchronization of approved Git versions to SharePoint will be manual.
 - Current-State Brief v0 must remain a discovery artifact and must not be represented as an approved current-state baseline.
+- English is the standard language for documents maintained in Git. Vietnamese or bilingual variants are created only for a defined audience or delivery obligation and must remain traceable to the authoritative English source.
+- Initial Phase 2 governance baseline documents use status `Draft` and version `0.1`.
+- Hoang Quy Nguyen is the initial document owner and approver; the mapped GitHub identity is `frwkHoangQuy`.
+- The exact Phase 2 changed-file set is the 11 files in Section 10.
+- Public visibility is temporarily accepted. Conversion to private is a deferred administrative action owned by the human authority.
 
 No customer, software, team, schedule, scope, resource, or technical-condition facts were supplied.
 
@@ -104,14 +134,12 @@ These are planning assumptions only, not approved policy:
 - Stable filenames without embedded version numbers will reduce broken links.
 - The first baseline should contain operational governance and reusable structures, but no substantive project claims.
 - Formal binaries or signed approval records may be linked from Git rather than duplicated into it.
-- Hoang Quy Nguyen is the likely initial approver, but the exact approver identity and GitHub account must be confirmed.
 
 ## 6. Unknown/TBD items
 
 The following remain unknown:
 
 - Repository confidentiality/data-classification requirements.
-- Whether public visibility is intentional.
 - Customer identity and permitted level of identification.
 - SAC mandate, business objectives, scope, exclusions, schedule, budget, and resources.
 - Hanoi and Ho Chi Minh City team identities and responsibilities.
@@ -120,24 +148,22 @@ The following remain unknown:
 - Current architecture, environments, integrations, data, security posture, and technical debt.
 - SharePoint site, library, approval workflow, permissions, and link format.
 - Required regulatory, retention, contractual, or records-management rules.
-- Documentation language.
-- Document owners and delegated approvers.
-- Whether the initial governance baseline should be `Draft` or `Approved`.
 - Branch-protection and required-review settings after `main` exists.
 
 These must remain explicitly `TBD` until supported by evidence or human decision.
 
 ## 7. Conflicts or blockers
 
-### Blocking conflicts
+### Active constraints
 
-- **Public repository versus intended content:** Customer discovery, requirements, architecture, handover, risks, and operational support information commonly contain confidential or identifying material. A public repository is unsafe for such content unless the authority explicitly limits it to public-safe material.
-- **PR workflow versus empty repository:** There is no base commit or branch ref against which a Phase 2 pull request can be opened. The first commit requires an explicitly approved bootstrap exception or a human-created seed commit.
-- **Language policy:** The requested content cannot be authored consistently until English, Vietnamese, or bilingual usage is selected.
+- The repository is currently public. This does not block this plan revision and is not automatically a blocker for a separately authorized governance-only Phase 2.
+- While it remains public, no secrets, credentials, customer-identifying data, sensitive handover details, non-public architecture details, or confidential operational information may be added.
+- Any future need to store sensitive or non-public project content requires private visibility and appropriate access controls first.
+- Phase 2 remains blocked by the separate plan-approval and implementation-authorization gates, not by the obsolete empty-repository first-commit choice.
 
 ### Non-blocking observations
 
-- The local branch tracks `origin/main`, but that remote ref does not yet exist. This is expected for an empty repository.
+- GitHub automatically designated the plan branch as the default because it was the first and only remote branch; `main` remains absent.
 - The proposed 11 documentation categories are not repository reality; they are only a candidate design.
 - No existing instructions conflict with the task because no repository instruction files exist.
 
@@ -184,11 +210,13 @@ Git should contain a sanitized reference, identifier, status, and authorized lin
 - Passwords, tokens, API keys, private keys, connection strings, or credentials.
 - Production secrets or environment files.
 - Customer personal data, production datasets, raw database exports, or unredacted logs.
-- Confidential customer identifiers unless explicitly authorized for the repository's classification.
+- Customer-identifying data, sensitive handover details, non-public architecture details, or confidential operational information while the repository remains public.
 - Signed originals where SharePoint is the controlled record.
 - Large generated exports or duplicate working copies.
 - Chat/email transcripts as authoritative records.
 - Material prohibited by contract, privacy rules, or company policy.
+
+Current public visibility is temporarily accepted for plan review and is not automatically a blocker for a separately authorized governance-only Phase 2. The human authority owns the deferred administrative action to make the repository private. Sensitive or non-public project content must not be introduced until private visibility and appropriate access controls are verified.
 
 ## 9. Recommended initial structure
 
@@ -254,7 +282,7 @@ That future structure is not part of the proposed Phase 2 changed-file set.
 
 ## 10. Exact proposed Phase 2 changed-file set
 
-Subject to resolution of the blocking decisions, Phase 2 should create exactly these 11 files:
+If the plan and Phase 2 are separately approved, Phase 2 should create exactly these 11 files:
 
 1. `README.md`
 2. `AGENTS.md`
@@ -276,9 +304,9 @@ No other files or directories are proposed for Phase 2. In particular, no `.giti
 |---|---|---|---|
 | `README.md` | Repository purpose, boundaries, authority model, navigation, lifecycle summary, confidentiality warning, Git/SharePoint roles, and TBD policy | Gives every user a safe entry point | Confirmed repository/authority facts plus governance |
 | `AGENTS.md` | Read-before-edit rules, instruction precedence, factual/TBD rules, sensitive-data prohibition, allowed paths, approval gates, exact-scope discipline, and verification requirements | Protects future agent-assisted work | Governance only |
-| `docs/00-project-control/document-governance.md` | Lifecycle, roles, metadata, naming/versioning, review/approval, supersession, link rules, language policy placeholder, and sensitive-data handling | Central governance source avoids duplication | Governance only |
+| `docs/00-project-control/document-governance.md` | Lifecycle, roles, metadata, naming/versioning, review/approval, supersession, link rules, approved language policy, and sensitive-data handling | Central governance source avoids duplication | Governance only |
 | `docs/00-project-control/git-sharepoint-sync.md` | Candidate preparation, Git approval, merge, export, SharePoint publication, register update, reconciliation, and correction workflow | Manual synchronization is a core operational boundary | Governance only |
-| `registers/document-register.md` | Column definitions and an initially empty register for controlled documents, versions, content SHAs, and SharePoint status | Provides the cross-system control record | Governance structure; no project facts |
+| `registers/document-register.md` | Column definitions and initial rows for all 11 controlled governance, register, and template files, including versions, content SHAs, and SharePoint status | Provides the cross-system control record | Governance structure; no project facts |
 | `registers/raid-log.md` | Definitions for risk, assumption, issue, and dependency; controlled status/severity fields; initially no factual entries | Needed early without inventing risks | Governance structure; no project facts |
 | `registers/decision-log.md` | Decision ID, date, status, owner, decision, rationale, alternatives, evidence, and affected documents; initially no decisions beyond approved bootstrap decisions | Prevents decisions being lost in chat/email | Governance structure; approved decisions only when supplied |
 | `templates/project-document-template.md` | Standard metadata and headings for purpose, context, evidence, content, open items, approvals, and references | Establishes consistent authoring | Template only |
@@ -296,6 +324,28 @@ Safe to initialize now:
 - Current-State Brief template.
 - Meeting-minutes template.
 - Handover-checklist template.
+
+### Initial document-register rows
+
+Phase 2 initializes the document register with the following 11 rows. Governance and register files are controlled operational documents; templates are controlled template assets and use the `SAC-TPL` type. Templates are registered for version and source traceability but do not represent completed project-content documents.
+
+All rows use status `Draft`, version `0.1`, owner `Hoang Quy Nguyen`, approver `Hoang Quy Nguyen`, GitHub identity `frwkHoangQuy`, `approved_content_commit: TBD`, `sharepoint_url: TBD`, and SharePoint synchronization status/date `TBD`.
+
+| Document ID | Git path | Title | Classification |
+|---|---|---|---|
+| `SAC-GOV-001` | `README.md` | SAC Documentation Repository Overview | Governance |
+| `SAC-GOV-002` | `AGENTS.md` | Repository Agent Instructions | Governance |
+| `SAC-GOV-003` | `docs/00-project-control/document-governance.md` | Document Governance | Governance |
+| `SAC-GOV-004` | `docs/00-project-control/git-sharepoint-sync.md` | Git-SharePoint Synchronization Procedure | Governance |
+| `SAC-REG-001` | `registers/document-register.md` | Document Register | Register |
+| `SAC-REG-002` | `registers/raid-log.md` | RAID Log | Register |
+| `SAC-REG-003` | `registers/decision-log.md` | Decision Log | Register |
+| `SAC-TPL-001` | `templates/project-document-template.md` | Project Document Template | Template |
+| `SAC-TPL-002` | `templates/current-state-brief-template.md` | Current-State Brief Template | Template |
+| `SAC-TPL-003` | `templates/meeting-minutes-template.md` | Meeting Minutes Template | Template |
+| `SAC-TPL-004` | `templates/handover-checklist-template.md` | Handover Checklist Template | Template |
+
+These rows record control metadata only. They do not assert SharePoint publication, approval, synchronization, project facts, customer facts, or approved content commit SHAs.
 
 Deferred:
 
@@ -320,9 +370,9 @@ Deletion should not be used to conceal superseded approved records.
 
 - `owner`: accountable for accuracy and maintenance.
 - `approver`: person authorized to approve that document.
+- The initial owner and approver is Hoang Quy Nguyen, mapped to GitHub identity `frwkHoangQuy`.
 - Material scope, governance, or baseline changes require Hoang Quy Nguyen's approval unless delegation is recorded.
-- Author and approver should be different where practicable.
-- A GitHub approval identity must be mapped to the named human approver.
+- Author and approver should be different where practicable; the human authority has explicitly assigned both initial roles to Hoang Quy Nguyen for this baseline.
 
 ### Naming and versioning
 
@@ -335,6 +385,14 @@ Deletion should not be used to conceal superseded approved records.
 - Minor approved revision: `1.1`, `1.2`.
 - Material restructuring or changed baseline: `2.0`.
 - Ordinary commits do not automatically increment a document version; version changes correspond to controlled document releases.
+- Initial Phase 2 governance, register, and template files use status `Draft` and version `0.1`.
+
+### Documentation language
+
+- English is the standard language for documents maintained in Git.
+- Vietnamese or bilingual variants are created only when required for a defined audience or delivery obligation.
+- A translation must preserve traceability to its authoritative English source.
+- This decision does not add translation deliverables to the exact 11-file Phase 2 scope.
 
 ### Branch and PR workflow after bootstrap
 
@@ -347,14 +405,35 @@ Deletion should not be used to conceal superseded approved records.
 7. Merge without bypassing required review.
 8. Record the approved content commit and synchronize when publication is required.
 
-### First-commit exception
+### Phase 2 bootstrap topology
 
-Because `main` has no commit, Phase 2 requires one of these explicit choices:
+Phase 2 must use this sequence, without variation:
 
-- Authorize one exact, reviewed bootstrap commit directly to `main`; normal PR governance begins immediately afterward.
-- Have the human create a seed commit, after which Phase 2 uses a branch and PR.
+1. Identify the **approved plan commit**: the future plan revision SHA explicitly approved by the human authority.
+2. Create `main` at exactly that approved plan commit.
+3. Set `main` as the default branch.
+4. Create `implementation/0001-repository-initialization` from `main`.
+5. Create exactly the approved 11-file Phase 2 set in Section 10.
+6. Validate and commit the implementation.
+7. Push `implementation/0001-repository-initialization`.
+8. Open a pull request targeting `main`.
+9. Obtain human review and approval before merge.
 
-The first option is simpler, but it must be explicitly authorized as a one-time exception.
+In compact form:
+
+```text
+approved plan commit
+-> create main at exactly the approved plan commit
+-> set main as the default branch
+-> create implementation/0001-repository-initialization from main
+-> create exactly the approved 11-file Phase 2 set
+-> validate and commit the implementation
+-> push the implementation branch
+-> open a pull request targeting main
+-> obtain human review and approval before merge
+```
+
+"Approved plan commit" means the future plan revision SHA explicitly approved by the human authority. It does not automatically mean root commit `2fafae7f304ca5acdc675509da7f658f97a7903c`, and merely pushing v0.2 does not approve that revision. The plan branch must not be used as the implementation branch, and Phase 2 must not commit implementation content directly to the current default plan branch. Creating `main`, changing the default branch, creating implementation files, pushing an implementation branch, and opening a pull request all require separate Phase 2 authorization.
 
 ## 13. Git-SharePoint synchronization workflow
 
@@ -398,6 +477,7 @@ status:
 version:
 owner:
 approver:
+github_identity:
 last_updated:
 ```
 
@@ -421,9 +501,10 @@ Before commit:
 - `version`
 - `owner`
 - `approver`
+- `github_identity`
 - `last_updated`
 
-Unknown values should be `TBD`, not blank or invented. `last_updated` is the document revision date, not an automatically changing build timestamp.
+For the initial Phase 2 baseline, `owner` and `approver` are `Hoang Quy Nguyen`, and `github_identity` is `frwkHoangQuy`. Other unknown values should be `TBD`, not blank or invented. `last_updated` is the document revision date, not an automatically changing build timestamp.
 
 After merge:
 
@@ -462,9 +543,12 @@ Creating a v0 now would provide only headings and TBD markers, duplicating the t
 Before any Phase 2 edit:
 
 - Reconfirm repository visibility and remote.
-- Reconfirm the repository is still empty and the worktree is clean.
+- Reconfirm the approved plan commit SHA and clean worktree.
 - Re-read any newly introduced `AGENTS.md` or contribution instructions.
 - Record the human decisions and exact authorization scope.
+- Confirm separate authorization to create `main`, change the default branch, create the implementation branch and files, push, and open a pull request.
+- Create `main` at exactly the human-approved plan commit, set it as default, and create `implementation/0001-repository-initialization` from `main` before editing implementation content.
+- Confirm the approved plan commit is the explicitly approved future revision SHA, not merely the most recently pushed plan commit.
 
 During Phase 2:
 
@@ -478,15 +562,15 @@ During Phase 2:
 - Run `git diff --check`.
 - Review the entire staged diff, not only a summary.
 
-Before the initial commit:
+Before the implementation commit:
 
 - Compare `git diff --cached --name-only` against the exact 11-file allowlist.
 - Review `git diff --cached`.
 - Confirm no untracked or unrelated files exist with `git status --short`.
 - Confirm every created directory contains an approved file.
 - Confirm no project-content directory was created.
-- Confirm the chosen language policy is applied consistently.
-- Confirm the visibility/data-classification decision permits the content.
+- Confirm English is used consistently and no unapproved translation deliverable was created.
+- While the repository remains public, confirm the diff contains no secrets, credentials, customer-identifying data, sensitive handover details, non-public architecture details, or confidential operational information.
 - Obtain the explicit bootstrap and material-scope approval.
 
 After the commit, if authorized:
@@ -500,20 +584,36 @@ Acceptance requires both exact scope and absence of unsupported or sensitive con
 
 ## 17. Risks and decision gates
 
-### Blocking before Phase 2
+### Resolved by human authority
 
-- Repository visibility and permitted data classification.
-- One-time first-commit mechanism.
-- Documentation language.
-- Exact 11-file baseline approval.
-- Named approver and the meaning of `Approved` versus SharePoint approval status.
+- Documentation language: English is standard in Git; audience-required translations remain traceable to the English source.
+- Initial lifecycle: `Draft`, version `0.1`.
+- Initial owner and approver: Hoang Quy Nguyen; GitHub identity `frwkHoangQuy`.
+- Exact Phase 2 scope: the unchanged 11 files in Section 10.
+- Bootstrap topology: approved plan commit -> `main` -> implementation branch -> PR targeting `main`.
+- Document-register initialization: rows for all 11 controlled governance, register, and template assets with the values specified in Section 11.
+- Current public visibility: temporarily accepted; a deferred change to private is owned by the human authority.
+
+### No longer active
+
+- The empty-repository first-commit choice. The plan root commit and remote plan branch now exist.
+
+### Still requires separate approval or authorization
+
+- Approval of the complete revised plan by its reviewed commit SHA.
+- Creation of `main` at the approved plan commit.
+- Changing the default branch to `main`.
+- Phase 2 implementation and its exact content.
+- Opening the implementation pull request and merging it.
+- Publication or synchronization to SharePoint.
+- Private visibility and appropriate access controls before any sensitive or non-public project content is stored.
 
 ### May safely remain TBD during bootstrap
 
 - SharePoint URL and library, provided the fields remain `TBD`.
 - Software repository URL.
 - Detailed branch-protection settings until `main` exists.
-- Document owners for future project-content documents.
+- Owners and approvers for future project-content documents beyond the initial baseline.
 - Regulatory and retention details, provided no sensitive material is introduced.
 
 ### Future discovery questions that do not block bootstrap
@@ -528,13 +628,9 @@ These belong in discovery and must not be answered speculatively during initiali
 
 ## 18. Questions requiring human decision
 
-1. May `frwkHoangQuy/-Doc-SAC` remain public, and exactly what information classification is permitted? Recommended: make it private before adding any customer, architecture, handover, risk, or operational material.
-2. For the empty-repository bootstrap, do you authorize one reviewed initial commit directly to `main`, or will you create a seed commit so Phase 2 can use a PR?
-3. Should repository documents be English, Vietnamese, or bilingual? Recommended: choose one primary language and translate only documents with a defined audience need; avoid maintaining duplicate bilingual copies without ownership.
-4. Should the Phase 2 governance baseline be committed as `Draft` pending operational trial, or approved as version `1.0`? Recommended: `Draft`/`0.1` until the workflow and SharePoint mapping are validated.
-5. Who is the named document approver, and which GitHub identity represents that approval?
-6. Do you approve the exact 11-file Phase 2 scope proposed above?
-7. Where is the authorized SharePoint site/library, and what SharePoint state constitutes official approval? This may remain TBD for initial creation but must be resolved before the first synchronization.
+1. Is the future v0.2 plan commit approved as the controlling plan commit for Phase 2? A pushed commit is not approved until the human authority explicitly identifies and approves its SHA.
+2. Is the separate Phase 2 authorization granted to create `main`, change the default branch, create and push the implementation branch, create the 11 files, and open a pull request? This plan revision does not grant that authorization.
+3. Where is the authorized SharePoint site/library, and what SharePoint state constitutes official approval? This may remain `TBD` for governance-only bootstrap but must be resolved before the first synchronization.
 
 ## 19. Final statement confirming that no repository changes were made
 
