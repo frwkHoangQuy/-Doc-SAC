@@ -17,7 +17,14 @@ last_updated: 2026-07-22
 
 - **Confirmed:** Git is the working source; SharePoint is the separate manual publication and approval target.
 - **Confirmed:** Evidence locations must be public-safe sanitized references or authorized access-controlled links; credentials and sensitive handover detail are prohibited.
-- **Unknown/TBD:** Unverified checklist items start as `Not Started`.
+- **Confirmed:** Unverified checklist items start as `Not Started`.
+
+## Controlling references
+
+- [SAC-PLAN-0002](../plans/0002-current-state-discovery-and-decision-readiness-plan.md) controls the required confirmation coverage and unresolved delivery decisions.
+- [Document Governance](../00-project-control/document-governance.md) controls Draft status, evidence classification, and public-repository restrictions.
+- [Git–SharePoint Synchronization Procedure](../00-project-control/git-sharepoint-sync.md) establishes Git as the working source and SharePoint as the separate manual publication/approval target.
+- [Decision Log](../../registers/decision-log.md) records the approved controlling plan and the exact six-file implementation authorization.
 
 ## Verification checklist
 
@@ -45,5 +52,5 @@ last_updated: 2026-07-22
 
 ## Sign-off and synchronization
 
-- **Decision required:** No sign-off, acceptance, publication, or synchronization is authorized.
+- **Confirmed:** No sign-off, acceptance, publication, or synchronization is authorized.
 - **Unknown/TBD:** SharePoint URL, status, and synchronization time are TBD.

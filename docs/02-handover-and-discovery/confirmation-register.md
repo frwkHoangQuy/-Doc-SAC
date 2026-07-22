@@ -17,7 +17,14 @@ last_updated: 2026-07-22
 
 - **Confirmed:** Git is the working source; SharePoint is the separate manual publication and approval target.
 - **Assumption:** 2026-07-23 in `Asia/Ho_Chi_Minh` is a planned evidence-review context, not a due-date commitment or evidence-completion claim.
-- **Decision required:** Evidence and human answers from that context require separate authorization before a new non-amended commit on the existing implementation branch and Draft PR.
+- **Confirmed:** Evidence and human answers from that context require separate authorization before a new non-amended commit on the existing implementation branch and Draft PR.
+
+## Controlling references
+
+- [SAC-PLAN-0002](../plans/0002-current-state-discovery-and-decision-readiness-plan.md) controls the confirmation inventory, classifications, and evidence-update boundary.
+- [Document Governance](../00-project-control/document-governance.md) controls Draft status, evidence classification, and public-repository restrictions.
+- [Git–SharePoint Synchronization Procedure](../00-project-control/git-sharepoint-sync.md) establishes Git as the working source and SharePoint as the separate manual publication/approval target.
+- [Decision Log](../../registers/decision-log.md) records the approved controlling plan and the exact six-file implementation authorization.
 
 ## Confirmation inventory
 

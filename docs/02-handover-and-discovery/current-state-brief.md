@@ -17,8 +17,15 @@ last_updated: 2026-07-22
 
 - **Confirmed:** Git is the working source; SharePoint is the separate manual publication and approval target.
 - **Confirmed:** This public repository may contain only sanitized references to authorized access-controlled evidence.
-- **Unknown/TBD:** No project-content fact in this brief is confirmed without identified evidence.
-- **Decision required:** Evidence or human answers obtained on 2026-07-23 require separate explicit authorization before recording in Git.
+- **Confirmed:** This Draft contains no confirmed project-content fact; the underlying project facts remain Unknown/TBD pending identified evidence.
+- **Confirmed:** Evidence or human answers obtained on 2026-07-23 require separate explicit authorization before recording in Git.
+
+## Controlling references
+
+- [SAC-PLAN-0002](../plans/0002-current-state-discovery-and-decision-readiness-plan.md) controls the Discovery Draft scope, classifications, and remaining authorization boundaries.
+- [Document Governance](../00-project-control/document-governance.md) controls Draft status, evidence classification, and public-repository restrictions.
+- [Git–SharePoint Synchronization Procedure](../00-project-control/git-sharepoint-sync.md) establishes Git as the working source and SharePoint as the separate manual publication/approval target.
+- [Decision Log](../../registers/decision-log.md) records the approved controlling plan and the exact six-file implementation authorization.
 
 ## Current-state confirmation matrix
 
@@ -48,7 +55,7 @@ last_updated: 2026-07-22
 
 - **Confirmed:** No architecture recommendation, reuse conclusion, team assignment, scope commitment, or schedule commitment is recorded here.
 - **Unknown/TBD:** All evidence references, accountable project owners, and factual conclusions are TBD.
-- **Decision required:** This Draft is not approved, signed off, published, synchronized, or closed.
+- **Confirmed:** This Draft is not approved, signed off, published, synchronized, or closed.
 
 ## SharePoint synchronization
 
