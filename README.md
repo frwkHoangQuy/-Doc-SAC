@@ -24,6 +24,8 @@ last_updated: 2026-07-22
 
 This repository controls project and technical documentation for the early discovery and governance stage of SAC. It provides working history, review evidence, document templates, registers, and links to approved publication records. It does not establish project facts that have not been supported by evidence.
 
+Project-content paths are created only when an evidence-backed document is ready to occupy them. Do not create speculative category directories or placeholder project documents.
+
 ## Repository boundaries
 
 ### Belongs in this Git repository
@@ -77,6 +79,13 @@ Classify information as one of:
 - **Decision required:** A choice must be made by an authorized person.
 
 Never convert an assumption or TBD into a fact without evidence. Unknown project, customer, team, schedule, architecture, scope, or technical information remains `TBD`.
+
+## Documentation language
+
+- English is the authoritative standard language for documents maintained in Git.
+- Create a Vietnamese or bilingual variant only for a defined audience or delivery obligation.
+- Every translation must identify and remain traceable to its authoritative English source, including document ID, source path, and controlled version.
+- Translation requirements do not authorize additional files unless their paths are explicitly approved.
 
 ## Navigation
 

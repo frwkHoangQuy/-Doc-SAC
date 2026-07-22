@@ -31,7 +31,11 @@ If instructions conflict materially or authorization is unclear, stop without wr
 - Read all applicable repository instructions before acting.
 - Verify branch, HEAD, remote, status, and authorized file set before editing.
 - Create, modify, stage, commit, and push only explicitly authorized paths.
+- Never expand scope silently, even when an additional change appears useful or closely related.
+- Never modify an approved plan, baseline, or other approved artifact unless that exact artifact and revision are explicitly authorized.
 - Never discard, overwrite, combine, or amend unrelated user work.
+- Never use destructive Git operations such as `git reset --hard`, destructive checkout/restore, history rewriting, or branch deletion without explicit authorization.
+- Never force-push.
 - Do not create placeholder files or directories outside the authorized set.
 - Do not merge, change settings, publish, or synchronize unless separately authorized.
 
@@ -45,6 +49,12 @@ Never invent customer, project, team, mandate, schedule, architecture, scope, re
 - **Decision required:** Requires an authorized human choice.
 
 Do not silently promote assumptions or chat statements into confirmed repository facts.
+
+## Language and translation traceability
+
+- English is the authoritative standard language for documents maintained in Git.
+- Create Vietnamese or bilingual variants only for a defined audience or delivery obligation and an explicitly authorized path.
+- A translation must identify its authoritative English source by document ID, Git path, and controlled version.
 
 ## Approval discipline
 
@@ -76,7 +86,14 @@ Private visibility and appropriate access controls must be verified before any s
 
 ## Required validation
 
-Before committing, verify the exact changed-file set, metadata, links, Markdown structure, sensitive-data absence, `git diff --check`, full diff, staged scope, and clean handling of unrelated work.
+Before committing and again before handoff:
+
+- compare the staged paths deterministically against the explicit allowlist and fail on any missing or extra path;
+- resolve every relative Markdown link from the directory containing the source file and fail on a missing target;
+- verify metadata, Markdown structure, language/translation traceability, and sensitive-data absence;
+- run `git diff --check` and inspect the complete staged diff;
+- confirm no approved artifact or unrelated file changed; and
+- finish with a clean working tree after the authorized commit and push.
 
 ## Current classifications
 

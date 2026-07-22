@@ -28,7 +28,7 @@ last_updated: 2026-07-22
 
 | Field | Meaning |
 |---|---|
-| ID | Stable RAID entry identifier |
+| ID | Stable identifier in the format `SAC-RAID-NNN` |
 | Type | Risk, Assumption, Issue, or Dependency |
 | Description | Concise statement without unsupported facts |
 | Evidence | Source supporting the entry or `TBD` |
@@ -37,15 +37,26 @@ last_updated: 2026-07-22
 | Severity | Agreed severity, otherwise `TBD` |
 | Owner | Accountable person or `TBD` |
 | Date | ISO `YYYY-MM-DD` record date |
+| Target date | ISO `YYYY-MM-DD` intended resolution/review date or `TBD` |
 | Status | Proposed, Open, Monitoring, Closed, or `TBD` |
 | Action | Next action or `TBD` |
+| Related links | Valid relative repository links or sanitized authorized external references; otherwise `TBD` |
+
+## Controlled values
+
+- **Type:** `Risk`, `Assumption`, `Issue`, or `Dependency`.
+- **Probability:** `Low`, `Medium`, `High`, `Not Applicable`, or `TBD`.
+- **Severity:** `Low`, `Medium`, `High`, `Critical`, `Not Applicable`, or `TBD`.
+- **Status:** `Proposed`, `Open`, `Monitoring`, `Closed`, or `TBD`.
+- **Date and target date:** ISO `YYYY-MM-DD` or `TBD`.
+- **Owner:** Authorized named owner or `TBD`; do not infer ownership.
 
 ## Entries
 
 No entries recorded.
 
-| ID | Type | Description | Evidence | Impact | Probability | Severity | Owner | Date | Status | Action |
-|---|---|---|---|---|---|---|---|---|---|---|
+| ID | Type | Description | Evidence | Impact | Probability | Severity | Owner | Date | Target date | Status | Action | Related links |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
 ## Current classifications
 

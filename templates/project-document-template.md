@@ -26,6 +26,7 @@ last_updated: 2026-07-22
 5. Cite authoritative sources without copying restricted data into Git.
 6. Validate metadata, links, Markdown, sensitive-data absence, and diff scope before review.
 7. Do not claim approval or SharePoint synchronization without verified records.
+8. Remove template drafting guidance, instructional placeholders, and unused example rows before controlled review; retain required governance sections and explicit unresolved `TBD` items.
 
 ## Copyable document metadata
 
@@ -45,6 +46,10 @@ last_updated: YYYY-MM-DD
 Do not add a current Git commit SHA to the document metadata. Record an approved content commit in the document register after it exists.
 
 ## Purpose
+
+TBD
+
+## Context
 
 TBD
 
@@ -89,6 +94,20 @@ No decisions recorded.
 
 TBD
 
+## Risks and dependencies
+
+No risks or dependencies recorded.
+
+| Type | Description | Evidence | Related RAID ID | Owner | Status |
+|---|---|---|---|---|---|
+
+## Related documents
+
+| Document ID | Title | Relative link | Relationship |
+|---|---|---|---|
+
+Validate each relative link from the directory containing the completed document.
+
 ## References and evidence
 
 TBD
@@ -99,6 +118,12 @@ TBD
 |---|---|---|---|---|
 | Owner | TBD | Draft | TBD | TBD |
 | Approver | TBD | Not approved | TBD | TBD |
+
+## Revision and supersession notes
+
+| Version | Date | Change summary | Replaces/supersedes | Approval state |
+|---|---|---|---|---|
+| 0.1 | TBD | Initial Draft | None | Not approved |
 
 ## SharePoint synchronization
 

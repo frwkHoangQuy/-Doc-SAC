@@ -11,7 +11,7 @@ last_updated: 2026-07-22
 
 # Current-State Brief Template
 
-> **Discovery template. Remains a Discovery Draft until claims are supported by cited evidence and formally approved.**
+> **Discovery template. Any document created from this template remains a Discovery Draft until its claims are supported by cited evidence and formally approved.**
 
 ## Control state
 
@@ -31,7 +31,23 @@ last_updated: 2026-07-22
 
 TBD
 
+## Objectives
+
+TBD
+
+## Authority
+
+TBD
+
 ## Stakeholders
+
+TBD
+
+## Teams and responsibilities
+
+TBD
+
+## Handover status
 
 TBD
 
@@ -61,6 +77,16 @@ TBD
 
 TBD
 
+## Integrations
+
+TBD
+
+## Environments and access
+
+TBD
+
+Do not record credentials, tokens, private endpoints, or non-public configuration.
+
 ## Data and security
 
 TBD
@@ -70,6 +96,21 @@ Do not include credentials, customer-identifying data, production data, non-publ
 ## Testing
 
 TBD
+
+## Operations and support
+
+TBD
+
+## Deployment condition
+
+TBD
+
+## Confirmed facts
+
+No confirmed facts recorded.
+
+| Fact | Authoritative source | Verified date |
+|---|---|---|
 
 ## Known gaps
 
@@ -82,14 +123,22 @@ No assumptions recorded.
 ## Unknown/TBD
 
 - Mandate: TBD
+- Objectives: TBD
+- Authority: TBD
 - Stakeholders: TBD
+- Teams and responsibilities: TBD
+- Handover status: TBD
 - Software inventory: TBD
 - Scope: TBD
 - Schedule: TBD
 - Resources: TBD
 - Architecture: TBD
+- Integrations: TBD
+- Environments and access: TBD
 - Data and security: TBD
 - Testing: TBD
+- Operations and support: TBD
+- Deployment condition: TBD
 
 ## Decisions required
 
@@ -99,6 +148,15 @@ TBD
 
 | Claim or section | Source | Classification | Verified date |
 |---|---|---|---|
+
+## Approval state
+
+| Field | Value |
+|---|---|
+| Document status | Draft |
+| Owner review | TBD |
+| Approver decision | Not approved |
+| Approval evidence | TBD |
 
 ## SharePoint synchronization
 

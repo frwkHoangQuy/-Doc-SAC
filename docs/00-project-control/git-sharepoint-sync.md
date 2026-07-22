@@ -22,6 +22,23 @@ last_updated: 2026-07-22
 
 Each authoritative document has one working source in Git. Email, chat, local exports, and SharePoint copies must not become parallel editing sources. SharePoint changes must be reconciled back into Git before further editing continues.
 
+## Publication prerequisites
+
+Before publication, verify that:
+
+- the document passed review and has explicit human approval for the identified version;
+- merge authorization was granted and the controlled content is present on `main`;
+- the exact content commit is known and the working tree is clean;
+- metadata, register entry, relative links, and evidence references are valid;
+- the public-repository confidentiality review passed; and
+- the authorized SharePoint destination and required corporate approval workflow are known.
+
+If any prerequisite is missing, stop synchronization and record the state as `TBD` or a controlled exception; do not infer success.
+
+## Manual synchronization ownership
+
+Hoang Quy Nguyen (`frwkHoangQuy`) is the initial owner of the manual Git-to-SharePoint synchronization action. Automation, delegation, or another synchronization owner is **Unknown/TBD** until explicitly approved. Uploading or publishing is a separate authorized action and is never implied by merge.
+
 ## Required synchronization sequence
 
 1. **Author:** Create or revise the document in Git using evidence-backed content and explicit TBDs.
@@ -42,6 +59,18 @@ Each authoritative document has one working source in Git. Email, chat, local ex
 5. Merge only when separately authorized.
 6. Republish the reconciled Git-controlled version to SharePoint.
 7. Update the document register.
+
+## Exception and failure handling
+
+- **Approval missing or rejected:** Do not publish; return the document to the applicable lifecycle state and record the decision evidence.
+- **Content changed during export:** Discard the export, identify the intended Git content commit again, and regenerate it.
+- **SharePoint unavailable or upload fails:** Leave all SharePoint register fields unchanged or `TBD`; record the failure outside sensitive content and retry only when authorized.
+- **SharePoint copy differs from Git:** Stop further editing and publication, compare against the identified content commit, and reconcile through Git review.
+- **Unauthorized SharePoint edit:** Treat it as a proposed correction; do not overwrite Git or accept it silently.
+- **Sensitive information discovered:** Stop immediately, do not publish or commit it, notify the human authority, and follow the applicable security process.
+- **Incorrect register entry:** Correct the register through a reviewed Git change; never rewrite Git history or fabricate timestamps.
+
+Exceptions do not waive approval, confidentiality, traceability, or reconciliation requirements.
 
 ## Sensitive information
 

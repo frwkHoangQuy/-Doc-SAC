@@ -23,10 +23,18 @@ last_updated: 2026-07-22
 |---|---|
 | Decision ID | Stable identifier |
 | Date | ISO decision date |
+| Status | Proposed, Approved, Superseded, or Rejected |
 | Decision | Authorized choice |
 | Authority | Named decision maker |
 | Evidence | Controlling instruction or immutable reference |
 | Scope | Exact effect and boundary |
+
+## Status definitions
+
+- **Proposed:** Awaiting an explicit authorized decision.
+- **Approved:** Explicitly accepted by the named authority within the recorded scope.
+- **Superseded:** Replaced by a later linked decision; history is retained.
+- **Rejected:** Explicitly declined by the named authority.
 
 ## Traceability rules
 
@@ -35,16 +43,22 @@ last_updated: 2026-07-22
 - Do not infer unstated project facts, approval, publication, or expanded scope.
 - A later change must reference the affected decision and preserve history.
 
+## Maintenance rules
+
+- Never alter the wording or scope of an Approved decision silently; record a new linked decision when it changes.
+- Validate decision IDs, dates, status values, authority, evidence links, and affected scope before commit.
+- Update supersession references in both the old and replacement records when applicable.
+
 ## Approved bootstrap decisions
 
-| Decision ID | Date | Decision | Authority | Evidence | Scope |
-|---|---|---|---|---|---|
-| `SAC-DEC-001` | 2026-07-22 | Approve SAC-PLAN-0001 v0.2 at commit `270c85c1f114ef903275b0663eb70497eb5fa3ff` as the controlling Phase 2 plan | Hoang Quy Nguyen (`frwkHoangQuy`) | Human Phase 2 authorization | Controls this repository initialization only |
-| `SAC-DEC-002` | 2026-07-22 | Authorize Phase 2 implementation using exactly the 11-file set in the controlling plan | Hoang Quy Nguyen (`frwkHoangQuy`) | Human Phase 2 authorization | Authorizes branch, files, validation, commit, push, and Draft PR; does not authorize merge |
-| `SAC-DEC-003` | 2026-07-22 | Use English as the standard language in Git | Hoang Quy Nguyen (`frwkHoangQuy`) | SAC-PLAN-0001 v0.2 | Vietnamese or bilingual variants require a defined audience or delivery obligation |
-| `SAC-DEC-004` | 2026-07-22 | Initialize governance baseline documents as Draft, version 0.1 | Hoang Quy Nguyen (`frwkHoangQuy`) | SAC-PLAN-0001 v0.2 | Does not approve the documents |
-| `SAC-DEC-005` | 2026-07-22 | Assign Hoang Quy Nguyen as initial owner and approver, mapped to `frwkHoangQuy` | Hoang Quy Nguyen (`frwkHoangQuy`) | SAC-PLAN-0001 v0.2 | Applies to the 11-file initial baseline |
-| `SAC-DEC-006` | 2026-07-22 | Temporarily accept public visibility for governance-only bootstrap | Hoang Quy Nguyen (`frwkHoangQuy`) | SAC-PLAN-0001 v0.2 | Prohibits secrets and sensitive or non-public project content; private conversion remains deferred |
+| Decision ID | Date | Status | Decision | Authority | Evidence | Scope |
+|---|---|---|---|---|---|---|
+| `SAC-DEC-001` | 2026-07-22 | Approved | Approve SAC-PLAN-0001 v0.2 at commit `270c85c1f114ef903275b0663eb70497eb5fa3ff` as the controlling Phase 2 plan | Hoang Quy Nguyen (`frwkHoangQuy`) | Human Phase 2 authorization | Controls this repository initialization only |
+| `SAC-DEC-002` | 2026-07-22 | Approved | Authorize Phase 2 implementation using exactly the 11-file set in the controlling plan | Hoang Quy Nguyen (`frwkHoangQuy`) | Human Phase 2 authorization | Authorizes branch, files, validation, commit, push, and Draft PR; does not authorize merge |
+| `SAC-DEC-003` | 2026-07-22 | Approved | Use English as the standard language in Git | Hoang Quy Nguyen (`frwkHoangQuy`) | SAC-PLAN-0001 v0.2 | Vietnamese or bilingual variants require a defined audience or delivery obligation |
+| `SAC-DEC-004` | 2026-07-22 | Approved | Initialize governance baseline documents as Draft, version 0.1 | Hoang Quy Nguyen (`frwkHoangQuy`) | SAC-PLAN-0001 v0.2 | Does not approve the documents |
+| `SAC-DEC-005` | 2026-07-22 | Approved | Assign Hoang Quy Nguyen as initial owner and approver, mapped to `frwkHoangQuy` | Hoang Quy Nguyen (`frwkHoangQuy`) | SAC-PLAN-0001 v0.2 | Applies to the 11-file initial baseline |
+| `SAC-DEC-006` | 2026-07-22 | Approved | Temporarily accept public visibility for governance-only bootstrap | Hoang Quy Nguyen (`frwkHoangQuy`) | SAC-PLAN-0001 v0.2 | Prohibits secrets and sensitive or non-public project content; private conversion remains deferred |
 
 ## Publication boundary
 

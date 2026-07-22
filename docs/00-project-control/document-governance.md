@@ -21,6 +21,12 @@ last_updated: 2026-07-22
 
 Hoang Quy Nguyen (`frwkHoangQuy`) is the initial document owner, approver, and human authority. Material scope, baseline, lifecycle, publication, or governance changes require explicit human approval. A commit or pull request provides review history but does not itself constitute approval.
 
+## Scope and exclusions
+
+This governance applies to controlled Markdown governance documents, registers, templates, and later evidence-backed project documents maintained in this repository.
+
+It excludes application source code, executable tests, build or deployment automation, infrastructure-as-code, secrets, production data, signed originals controlled in SharePoint, and speculative project-content placeholders. Software-coupled artifacts belong in the applicable source-code repository; restricted corporate records belong in an authorized access-controlled system.
+
 ## Document lifecycle
 
 | Status | Meaning | Entry condition | Exit condition |
@@ -58,6 +64,13 @@ The initial owner and approver are both Hoang Quy Nguyen by explicit human decis
 - Increment the minor version for compatible approved revisions and the major version for material baseline changes.
 - Ordinary Git commits do not automatically require a document-version increment.
 
+## Documentation language and translations
+
+- English is the authoritative standard language for documents maintained in Git.
+- Vietnamese or bilingual variants are created only for a defined audience or delivery obligation and an explicitly approved path.
+- Each translation must identify its authoritative English source by document ID, Git path, and controlled version.
+- A translation must be reconciled when its English source changes; it must not become an independent working source.
+
 ## Required metadata
 
 | Field | Purpose |
@@ -73,6 +86,16 @@ The initial owner and approver are both Hoang Quy Nguyen by explicit human decis
 
 Do not embed the document's current Git commit SHA in its own metadata. A metadata update would create a new commit and immediately make the embedded SHA stale. Record `approved_content_commit` in the document register after the controlled content commit exists.
 
+The following synchronization fields are maintained only in the document register, not embedded in each document:
+
+| Register-only field | Purpose |
+|---|---|
+| `approved_content_commit` | Exact approved Git content commit |
+| `sharepoint_url` | Verified official SharePoint location |
+| `sharepoint_status` | Current SharePoint workflow/publication state |
+| `sharepoint_version` | SharePoint-controlled version or reference |
+| `sharepoint_synced_at` | Verified manual synchronization timestamp |
+
 ## Evidence and unknowns
 
 Classify statements as:
@@ -84,6 +107,13 @@ Classify statements as:
 
 Never invent facts or use `TBD` as implied approval. Customer, mandate, team, schedule, scope, architecture, and technical information remain TBD until evidence is supplied.
 
+## Authoritative sources and links
+
+- Cite the authoritative source for every substantive claim; identify its owner, stable reference, or controlled location where available.
+- Chat and email may initiate work but are not authoritative document stores.
+- Use relative links for repository files. Resolve each link from the directory containing the source Markdown file and validate that its target exists.
+- Use sanitized authorized links for restricted external evidence. Do not copy restricted content into this public repository.
+
 ## Review, approval, and supersession workflow
 
 1. Owner authors in Git and cites evidence.
@@ -94,6 +124,19 @@ Never invent facts or use `TBD` as implied approval. Customer, mandate, team, sc
 6. The exact content commit is recorded in the document register when approved.
 7. SharePoint synchronization follows the separate synchronization procedure.
 8. A replacement document identifies the superseded version; Git history is retained.
+
+## Correction handling
+
+1. Record the correction source, affected document/version, evidence, and requested outcome.
+2. Stop parallel editing when an authoritative SharePoint correction affects the Git working source.
+3. Reconcile the correction on an explicitly authorized Git branch without overwriting history.
+4. Revalidate facts, metadata, links, confidentiality, register impact, and supersession impact.
+5. Obtain review and human approval before merge.
+6. If publication is required, republish from the exact reconciled Git content commit and update the document register.
+
+## Public-repository confidentiality restrictions
+
+While this repository remains public, never store secrets, credentials, tokens, keys, connection strings, customer-identifying or personal data, sensitive handover details, non-public architecture, confidential operational information, production data, database exports, environment secrets, production logs, restricted commercial records, or signed originals. Future sensitive or non-public project content requires verified private visibility and appropriate access controls first.
 
 ## Current classifications
 

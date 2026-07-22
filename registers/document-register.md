@@ -28,6 +28,25 @@ This register provides version, ownership, approval, Git-content, and SharePoint
 - **Register:** Controlled structured records maintained over time.
 - **Template:** Controlled reusable structures; a template is not a completed project-content document.
 
+## Field definitions
+
+| Field | Definition |
+|---|---|
+| Document ID | Stable unique identifier used across metadata, links, and registers |
+| Git path | Authoritative repository-relative working-source path |
+| Title | Controlled human-readable document title |
+| Classification | Governance, Register, or Template |
+| Status | Document lifecycle state: Draft, In Review, Approved, or Superseded |
+| Version | Controlled document version independent of ordinary commit count |
+| Owner | Person accountable for accuracy and maintenance |
+| Approver | Person authorized to approve the controlled content |
+| GitHub identity | GitHub account mapped to the named owner/approver for traceability |
+| `approved_content_commit` | Exact Git content commit approved for control/publication, or `TBD` |
+| `sharepoint_url` | Verified official SharePoint location, or `TBD` |
+| `sharepoint_status` | Verified SharePoint workflow/publication status, or `TBD` |
+| `sharepoint_version` | SharePoint-controlled version/reference, or `TBD` |
+| `sharepoint_synced_at` | Verified manual synchronization timestamp using ISO date/time and `Asia/Ho_Chi_Minh`, or `TBD` |
+
 ## Registered documents
 
 | Document ID | Git path | Title | Classification | Status | Version | Owner | Approver | GitHub identity | approved_content_commit | sharepoint_url | sharepoint_status | sharepoint_version | sharepoint_synced_at |

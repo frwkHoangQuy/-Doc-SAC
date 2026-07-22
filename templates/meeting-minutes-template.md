@@ -35,6 +35,9 @@ last_updated: 2026-07-22
 
 TBD
 
+| Participant | Role in meeting | Organization/team | Attendance status |
+|---|---|---|---|
+
 ## Agenda
 
 | Item | Owner | Intended outcome |
@@ -45,6 +48,34 @@ TBD
 Record concise evidence-backed notes. Classify uncertain statements explicitly.
 
 | Agenda item | Discussion summary | Evidence or reference | Classification |
+|---|---|---|---|
+
+## Evidence and documents reviewed
+
+| Document/evidence | Document ID or source | Relative/authorized link | Review outcome |
+|---|---|---|---|
+
+Validate repository-relative links from the directory containing the completed minutes. Do not copy restricted evidence into this public repository.
+
+## Confirmed facts
+
+No confirmed facts recorded.
+
+| Confirmed fact | Authoritative source | Confirmed by |
+|---|---|---|
+
+## Assumptions
+
+No assumptions recorded.
+
+| Assumption | Validation needed | Owner |
+|---|---|---|
+
+## Open questions
+
+No open questions recorded.
+
+| Question | Decision/evidence needed | Owner | Target date |
 |---|---|---|---|
 
 ## Decisions
@@ -70,12 +101,17 @@ No RAID implications recorded.
 
 Meeting notes do not create a RAID entry automatically. Add a reviewed entry to the RAID log when authorized.
 
-## Review
+## Related links
 
-| Role | Name | Status | Date |
-|---|---|---|---|
-| Minute owner | TBD | Draft | TBD |
-| Reviewer | TBD | Not reviewed | TBD |
+| Relationship | Relative/authorized link | Notes |
+|---|---|---|
+
+## Review and distribution status
+
+| Role or audience | Name/group | Review status | Distribution status | Date |
+|---|---|---|---|---|
+| Minute owner | TBD | Draft | Not distributed | TBD |
+| Reviewer | TBD | Not reviewed | Not distributed | TBD |
 
 ## SharePoint synchronization
 
