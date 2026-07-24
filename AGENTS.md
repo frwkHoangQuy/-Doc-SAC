@@ -29,6 +29,8 @@ If instructions conflict materially or authorization is unclear, stop without wr
 ## Scope and allowlist discipline
 
 - Read all applicable repository instructions before acting.
+- For every project-information update, first read `docs/00-project-control/project-information-update-workflow.md`, allocate or use its stable `SAC-UPD-NNN`, classify source/authority and every substantive statement, and complete an exact impact map and PLAN.
+- Treat PLAN, immutable review, Human Authority authorization, bounded APPLY, PR, merge, baseline, and publication/synchronization as separate gates. No state, artifact, commit, or technical capability authorizes its successor.
 - Verify branch, HEAD, remote, status, and authorized file set before editing.
 - Create, modify, stage, commit, and push only explicitly authorized paths.
 - Never expand scope silently, even when an additional change appears useful or closely related.
@@ -38,6 +40,9 @@ If instructions conflict materially or authorization is unclear, stop without wr
 - Never force-push.
 - Do not create placeholder files or directories outside the authorized set.
 - Do not merge, change settings, publish, or synchronize unless separately authorized.
+- Keep `review/agent-artifacts` non-canonical: create no Pull Request from it, never merge it, and correct reviewed artifacts only with new versioned commits.
+- Maintain non-self-referential checkpoints: record the implementation content SHA in an authorized journal-only successor, verify that it is the successor's only parent, and return the containing checkpoint/report SHAs after Git creates them.
+- Recover fresh context from repository instructions, the workflow, update register, context/work journal, controlling Issue, exact immutable objects, and live refs; stop on mismatch instead of guessing.
 
 ## Evidence and factual integrity
 
@@ -83,6 +88,7 @@ Never add:
 - production data, database exports, or production logs.
 
 Private visibility and appropriate access controls must be verified before any sensitive or non-public project content is considered.
+Only the necessary public governance identity `Hoang Quy Nguyen` (`frwkHoangQuy`) is permitted without another explicit classification and authorization. Stop on another personal or stakeholder identity, private contact, private endpoint, or private corporate/SharePoint content.
 
 ## Required validation
 
@@ -94,6 +100,8 @@ Before committing and again before handoff:
 - run `git diff --check` and inspect the complete staged diff;
 - confirm no approved artifact or unrelated file changed; and
 - finish with a clean working tree after the authorized commit and push.
+
+For information-update transactions, also verify exact commit/push/branch counts, parent relationships, regular-file modes, four non-self-referential identifiers, remote read-back, immutable review-report scope, retained-history treatment, and zero unauthorized Issue/PR actions. Drift, ambiguity, partial remote state, open-ended scope, or absent authority fails closed; never amend, rebase, reset, force-push, delete, or compensate automatically.
 
 ## Current classifications
 

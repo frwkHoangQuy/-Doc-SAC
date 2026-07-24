@@ -20,7 +20,7 @@ last_updated: 2026-07-22
 
 ## Purpose
 
-This register provides version, ownership, approval, Git-content, and SharePoint traceability for the exact 11 Phase 2 baseline files. The controlling plan artifact is intentionally not a register row.
+This register provides version, ownership, approval, Git-content, and SharePoint traceability for canonical controlled files. Controlling plans and non-canonical review artifacts under `agent-artifacts/` are intentionally not register rows.
 
 ## Classifications
 
@@ -55,13 +55,19 @@ This register provides version, ownership, approval, Git-content, and SharePoint
 | `SAC-GOV-002` | `AGENTS.md` | Repository Agent Instructions | Governance | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-GOV-003` | `docs/00-project-control/document-governance.md` | Document Governance | Governance | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-GOV-004` | `docs/00-project-control/git-sharepoint-sync.md` | Git-SharePoint Synchronization Procedure | Governance | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-GOV-005` | `docs/00-project-control/project-information-update-workflow.md` | Project Information Update Workflow | Governance | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-REG-001` | `registers/document-register.md` | Document Register | Register | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-REG-002` | `registers/raid-log.md` | RAID Log | Register | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-REG-003` | `registers/decision-log.md` | Decision Log | Register | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-REG-005` | `registers/information-update-register.md` | Information Update Register | Register | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-REG-006` | `registers/context-and-work-journal.md` | Context and Work Journal | Register | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-TPL-001` | `templates/project-document-template.md` | Project Document Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-TPL-002` | `templates/current-state-brief-template.md` | Current-State Brief Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-TPL-003` | `templates/meeting-minutes-template.md` | Meeting Minutes Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 | `SAC-TPL-004` | `templates/handover-checklist-template.md` | Handover Checklist Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-TPL-005` | `templates/information-update-plan-template.md` | Information Update Plan Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-TPL-006` | `templates/information-impact-map-template.md` | Information Impact Map Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
+| `SAC-TPL-007` | `templates/review-artifact-template.md` | Review Artifact Template | Template | Draft | 0.1 | Hoang Quy Nguyen | Hoang Quy Nguyen | `frwkHoangQuy` | TBD | TBD | TBD | TBD | TBD |
 
 ## Maintenance rules
 
@@ -73,7 +79,7 @@ This register provides version, ownership, approval, Git-content, and SharePoint
 
 ## Current classifications
 
-- **Confirmed:** Exactly 11 Phase 2 baseline files are registered.
+- **Confirmed:** The six Issue #5 canonical additions are registered as Draft 0.1; review artifacts remain excluded.
 - **Assumption:** None recorded.
 - **Unknown/TBD:** All approval-commit and SharePoint fields are TBD.
 - **Decision required:** Approval and publication require later explicit human decisions.

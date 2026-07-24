@@ -95,13 +95,21 @@ Never convert an assumption or TBD into a fact without evidence. Unknown project
 | `SAC-GOV-002` | [Repository Agent Instructions](AGENTS.md) |
 | `SAC-GOV-003` | [Document Governance](docs/00-project-control/document-governance.md) |
 | `SAC-GOV-004` | [Git-SharePoint Synchronization Procedure](docs/00-project-control/git-sharepoint-sync.md) |
+| `SAC-GOV-005` | [Project Information Update Workflow](docs/00-project-control/project-information-update-workflow.md) |
 | `SAC-REG-001` | [Document Register](registers/document-register.md) |
 | `SAC-REG-002` | [RAID Log](registers/raid-log.md) |
 | `SAC-REG-003` | [Decision Log](registers/decision-log.md) |
+| `SAC-REG-005` | [Information Update Register](registers/information-update-register.md) |
+| `SAC-REG-006` | [Context and Work Journal](registers/context-and-work-journal.md) |
 | `SAC-TPL-001` | [Project Document Template](templates/project-document-template.md) |
 | `SAC-TPL-002` | [Current-State Brief Template](templates/current-state-brief-template.md) |
 | `SAC-TPL-003` | [Meeting Minutes Template](templates/meeting-minutes-template.md) |
 | `SAC-TPL-004` | [Handover Checklist Template](templates/handover-checklist-template.md) |
+| `SAC-TPL-005` | [Information Update Plan Template](templates/information-update-plan-template.md) |
+| `SAC-TPL-006` | [Information Impact Map Template](templates/information-impact-map-template.md) |
+| `SAC-TPL-007` | [Review Artifact Template](templates/review-artifact-template.md) |
+
+Canonical content is governed working-source material in the paths above. `review/agent-artifacts` is a separate immutable, non-canonical evidence channel: no Pull Request is created from it, it is never merged, and its presence cannot approve a plan, implementation, baseline, or publication.
 
 ## Current classifications
 

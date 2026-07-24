@@ -111,6 +111,8 @@ Never invent facts or use `TBD` as implied approval. Customer, mandate, team, sc
 
 - Cite the authoritative source for every substantive claim; identify its owner, stable reference, or controlled location where available.
 - Chat and email may initiate work but are not authoritative document stores.
+- Classify each source as authoritative evidence, supporting evidence, Human Authority instruction, discussion, Agent analysis, proposal/plan, review artifact, approved decision, canonical record, or historical record. Source existence does not establish truth or authority.
+- Process proposed project-information changes through [SAC-GOV-005](project-information-update-workflow.md) using a stable `SAC-UPD-NNN`, statement classifications, evidence capture, exact impact mapping, and separate PLAN/APPLY authority.
 - Use relative links for repository files. Resolve each link from the directory containing the source Markdown file and validate that its target exists.
 - Use sanitized authorized links for restricted external evidence. Do not copy restricted content into this public repository.
 
@@ -125,6 +127,12 @@ Never invent facts or use `TBD` as implied approval. Customer, mandate, team, sc
 7. SharePoint synchronization follows the separate synchronization procedure.
 8. A replacement document identifies the superseded version; Git history is retained.
 
+The reusable information-update lifecycle has thirteen separately controlled states: `INTAKE`, `SOURCE AND AUTHORITY ASSESSMENT`, `CLASSIFICATION`, `EVIDENCE CAPTURE`, `IMPACT MAPPING`, `PLAN`, `IMMUTABLE REVIEW`, `HUMAN AUTHORITY AUTHORIZATION`, `BOUNDED APPLY AND VALIDATION`, `PR AUTHORIZATION`, `MERGE AUTHORIZATION`, `BASELINE DECISION`, and `PUBLICATION / SYNCHRONIZATION AUTHORIZATION`. No state authorizes the next.
+
+Immutable review artifacts are versioned non-canonical evidence on `review/agent-artifacts`; they have no Document Register row, Pull Request, or merge path and cannot approve themselves. Canonical APPLY uses exact allowlists and a non-self-referential journal checkpoint: the journal records the content commit, while Git supplies the containing checkpoint and execution-report SHAs after creation. Fresh-context recovery must verify subject, parent, live head, report, and retained work.
+
+Migration or supersession requires an explicit Human Authority mapping for every predecessor; history remains preserved. PR creation, merge, baseline acceptance, and publication/synchronization are separate decisions. Publication authorization requires an accepted baseline, exact approved content SHA, classified copy, verified destination/workflow and boundary, successful safety review, executor, validation, evidence, and a later separately authorized register update. Authorization is not external completion; failure leaves the Git baseline and publication fields unchanged.
+
 ## Correction handling
 
 1. Record the correction source, affected document/version, evidence, and requested outcome.
@@ -133,6 +141,8 @@ Never invent facts or use `TBD` as implied approval. Customer, mandate, team, sc
 4. Revalidate facts, metadata, links, confidentiality, register impact, and supersession impact.
 5. Obtain review and human approval before merge.
 6. If publication is required, republish from the exact reconciled Git content commit and update the document register.
+
+For immutable plans, reviews, checkpoints, or partial transactions, correction uses a new bounded version and new commits. Never amend, rebase, reset, force-push, delete history, guess a self-referential SHA, or automatically compensate for ambiguous remote state.
 
 ## Public-repository confidentiality restrictions
 
