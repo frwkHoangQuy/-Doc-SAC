@@ -6,7 +6,7 @@ version: 0.1
 owner: Hoang Quy Nguyen
 approver: Hoang Quy Nguyen
 github_identity: frwkHoangQuy
-last_updated: 2026-07-22
+last_updated: 2026-07-24
 ---
 
 # Document Register
